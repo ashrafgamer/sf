@@ -158,7 +158,7 @@ client.on('ready', () => {
   console.log('╚[═════════════════════════════════════════════════════════════════]╝')
   console.log('')
   console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${} " ]`);
+  console.log(`Logged in as * [  ]`);
   console.log('')
   console.log('Informations :')
   console.log('')
