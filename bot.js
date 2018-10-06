@@ -1,31 +1,223 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const adminprefix = "$";
-const devs = ['414477438869831682'];
-client.on('message', message => {
-  var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
-
-if (message.content.startsWith(adminprefix + 'sp')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
-} else
-  if (message.content.startsWith(adminprefix + 'sn')) {
-client.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
-return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
-} else
-  if (message.content.startsWith(adminprefix + 'sa')) {
-client.user.setAvatar(argresult);
-  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-      } else
-if (message.content.startsWith(adminprefix + 'st')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");
-    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
-}
-
+client.on('ready', () => {
+  console.log(`Logged in as!`);
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
 });
 
 
-client.login("NDE0NDc3NDM4ODY5ODMxNjgy.Dms66Q.1t5__jNPNSyY42NeLC02KK_Zc4M")
+
+client.on("guildMemberRemove", member => {
+  member.send(`**
+Invites Rewards
+
+15 invites: 2$ :moneybag: 
+
+30 invites: 6$:moneybag: 
+
+50 invites: 10$:moneybag: 
+
+100 invites: 25$ ::moneybag:
+
+https://discord.gg/GgWc5K
+@everyone @here
+https://discord.gg/9dJpym
+**
+[${member}]`);
+
+
+  });
+
+client.on("guildMemberAdd", member => {
+  member.send(`**
+Invites Rewards
+
+15 invites: 2$ :moneybag: 
+
+30 invites: 6$:moneybag: 
+
+50 invites: 10$:moneybag: 
+
+100 invites: 25$ ::moneybag:
+
+https://discord.gg/GgWc5K
+@everyone @here
+https://discord.gg/9dJpym
+**
+
+[${member}]`);
+
+
+  });
+
+client.login("NDkyNTk4NjgxNzAzMjg0NzQz.Dokw7g.mBOkoNZyyLpJUJ8UqWzWlKpuSZw");
+
+
+const client2 = new Discord.Client();
+
+client2.on('ready', () => {
+  console.log(`Logged in as !`);
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client2.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client2.guilds.size} " ]`);
+  console.log(`Users! [ " ${client2.users.size} " ]`);
+  console.log(`channels! [ " ${client2.channels.size} " ]`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
+});
+
+
+client2.on("guildMemberRemove", member => {
+  member.send(`**
+Invites Rewards
+
+15 invites: 2$ :moneybag: 
+
+30 invites: 6$:moneybag: 
+
+50 invites: 10$:moneybag: 
+
+100 invites: 25$ ::moneybag:
+
+https://discord.gg/GgWc5K
+@everyone @here
+https://discord.gg/9dJpym
+**
+
+[${member}]`);
+
+
+  });
+
+client2.on("guildMemberAdd", member => {
+  member.send(`**
+Invites Rewards
+
+15 invites: 2$ :moneybag: 
+
+30 invites: 6$:moneybag: 
+
+50 invites: 10$:moneybag: 
+
+100 invites: 25$ ::moneybag:
+
+https://discord.gg/GgWc5K
+@everyone @here
+https://discord.gg/9dJpym
+**
+
+[${member}]`);
+
+
+  });
+
+client2.login("NDk3MTAyOTM3MDQzMTA3ODYw.DpaS3g.ghrJkpJhpNRs52XYreNxfS9FFk8");
+
+
+const client3 = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as !`);
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client3.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client3.guilds.size} " ]`);
+  console.log(`Users! [ " ${client3.users.size} " ]`);
+  console.log(`channels! [ " ${client3.channels.size} " ]`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
+});
+
+
+
+
+client3.on("guildMemberRemove", member => {
+  member.send(`**
+Invites Rewards
+
+15 invites: 2$ :moneybag: 
+
+30 invites: 6$:moneybag: 
+
+50 invites: 10$:moneybag: 
+
+100 invites: 25$ ::moneybag:
+
+https://discord.gg/GgWc5K
+@everyone @here
+https://discord.gg/9dJpym
+**
+
+[${member}]`);
+
+
+  });
+
+client3.on("guildMemberAdd", member => {
+  member.send(`**
+Invites Rewards
+
+15 invites: 2$ :moneybag: 
+
+30 invites: 6$:moneybag: 
+
+50 invites: 10$:moneybag: 
+
+100 invites: 25$ ::moneybag:
+
+https://discord.gg/GgWc5K
+@everyone @here
+https://discord.gg/9dJpym
+**
+
+[${member}]`);
+
+
+  });
+
+client3.login("NDk0ODk5NDQ0NTAwNjYwMjQ3.DpDCyA.lSAA6i-mmydxG6wiqFgKrSY7B9o");
