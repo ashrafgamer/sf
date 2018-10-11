@@ -194,3 +194,5 @@ client2.on("guildMemberRemove", member => {
 
 
   });
+
+client2.login("NDk5OTgwNDY1Mzc4NDI2ODgw.DqEK6g.LOdVXdUg9Re-FLn92cnrzKzaX_Y");
