@@ -31,7 +31,6 @@ client2.on('message', msg => {
     msg.channel.send("🇸🇦")
   }
 });
-
 client2.on('message', msg => {
   if (msg.content === 'مصر') {      
     msg.react("🇪🇬")
