@@ -170,7 +170,7 @@ client2.on("guildMemberRemove", member => {
 
   });
 
-  client.on('guildMemberAdd', member => {
+  client2.on('guildMemberAdd', member => {
   member.send(`
 
 السلام عليكم لو ما هنت ابيك تنور استضافتنا بوجودك
