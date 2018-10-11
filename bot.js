@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client2.on('ready', () => {
+
   console.log(`Logged in as!`);
   console.log('')
   console.log('')
