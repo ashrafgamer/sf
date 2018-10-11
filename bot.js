@@ -146,15 +146,15 @@ client2.on('ready', () => {
   console.log('')
 });
 
-
-client2.on("guildMemberRemove", member => {
-  member.send(`
-
+ 
+ client2.on("guildMemberRemove", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
 السلام عليكم لو ما هنت ابيك تنور استضافتنا بوجودك
 ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 ║║║║╩╣╚╣═╣║║║║║╩╣
 ╚══╩═╩═╩═╩═╩╩╩╩═╝ 
-
 ‏خدمات الي نقدمهة
 • قيف اواي بشكل يومي :tada: 
 • بيع احدث انواع الريجيديت :smiley: 
@@ -166,18 +166,20 @@ client2.on("guildMemberRemove", member => {
 • شرفنا على استضافتنا Soon
 • شرفنا على الدسكورد https://discord.gg/YtsrMTZ
                          #FoxHost
-[${member}]`);
+الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+**`)
+}).catch(console.error)
 
-  });
-
-  client2.on('guildMemberAdd', member => {
-  member.send(`
-
+})
+ 
+client2.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
 السلام عليكم لو ما هنت ابيك تنور استضافتنا بوجودك
 ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 ║║║║╩╣╚╣═╣║║║║║╩╣
 ╚══╩═╩═╩═╩═╩╩╩╩═╝ 
-
 ‏خدمات الي نقدمهة
 • قيف اواي بشكل يومي :tada: 
 • بيع احدث انواع الريجيديت :smiley: 
@@ -189,10 +191,8 @@ client2.on("guildMemberRemove", member => {
 • شرفنا على استضافتنا Soon
 • شرفنا على الدسكورد https://discord.gg/YtsrMTZ
                          #FoxHost
-
-[${member}]`);
-
-
-  });
-
-client2.login("NDk5OTgwNDY1Mzc4NDI2ODgw.DqEK6g.LOdVXdUg9Re-FLn92cnrzKzaX_Y");
+الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+**`) 
+}).catch(console.error)
+})
+client2.login('NDk5OTgwNDY1Mzc4NDI2ODgw.DqEK6g.LOdVXdUg9Re-FLn92cnrzKzaX_Y');
