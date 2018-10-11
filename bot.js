@@ -146,7 +146,7 @@ client2.on('ready', () => {
   console.log('')
 });
 
- 
+  
  client2.on("guildMemberRemove", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
@@ -195,4 +195,21 @@ client2.on("guildMemberAdd", member => {
 **`) 
 }).catch(console.error)
 })
+client2.on("message", async message => {
+  if(message.channel.type === "dm") return;
+
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+ 
+ if(cmd === `${prefix}send`) {
+  let announce = args.slice(0).join(" ");
+  if(announce <= 0) return message.channel.send("Can't send empty message !")
+  message.guild.members.map(m => m.send(announce));
+  message.reply("Done !")
+};
+ 
+})
+ 
 client2.login('NDk5OTgwNDY1Mzc4NDI2ODgw.DqEK6g.LOdVXdUg9Re-FLn92cnrzKzaX_Y');
