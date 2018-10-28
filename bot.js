@@ -1,81 +1,46 @@
-const Discord = require('discord.js');
+console.log(`Online`);
+
 const client = new Discord.Client();
-
-client.on('ready', () => {
-  console.log(`Logged in as!`);
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-});
+var ServerID = "505995244672909323"; 
+var ChannelID = "505995706490683393";
 
 
-console.log("Welcome Again !");
- 
- client.on("guildMemberRemove", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-السلام عليكم لو ما هنت ابيك تنور استضافتنا بوجودك
-╔╦╦╦═╦╗╔═╦═╦══╦═╗
-║║║║╩╣╚╣═╣║║║║║╩╣
-╚══╩═╩═╩═╩═╩╩╩╩═╝ 
-‏خدمات الي نقدمهة
-• قيف اواي بشكل يومي :tada: 
-• بيع احدث انواع الريجيديت :smiley: 
-• اسعار جبارة !! :money_with_wings: 
-• Credits,تقدر تدفع بايبال و اسيا و سوا
-• واخيرا حييييياكم واكيد وجودكم هو اللي بيدعمنا وراح نكون الافضل.
-• واعلان بسيط في 18 فل اكسس حساب فل اكسس في 35 الف كريدت 
-• و فل داتا 3 الف كريدت
-• شرفنا على استضافتنا Soon
-• شرفنا على الدسكورد https://discord.gg/YtsrMTZ
-                         #FoxHost
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]         
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
-**`)
-}).catch(console.error)
+    console.log(`Online`);
+client.on('warn', console.warn);
 
-})
- 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-السلام عليكم لو ما هنت ابيك تنور استضافتنا بوجودك
-╔╦╦╦═╦╗╔═╦═╦══╦═╗
-║║║║╩╣╚╣═╣║║║║║╩╣
-╚══╩═╩═╩═╩═╩╩╩╩═╝ 
-‏خدمات الي نقدمهة
-• قيف اواي بشكل يومي :tada: 
-• بيع احدث انواع الريجيديت :smiley: 
-• اسعار جبارة !! :money_with_wings: 
-• Credits,تقدر تدفع بايبال و اسيا و سوا
-• واخيرا حييييياكم واكيد وجودكم هو اللي بيدعمنا وراح نكون الافضل.
-• واعلان بسيط في 18 فل اكسس حساب فل اكسس في 35 الف كريدت 
-• و فل داتا 3 الف كريدت
-• شرفنا على استضافتنا Soon
-• شرفنا على الدسكورد https://discord.gg/YtsrMTZ
-                         #FoxHost
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
-**`) 
-}).catch(console.error)
-})
- 
-client.login('NDk5OTgwNDY1Mzc4NDI2ODgw.DqEK6g.LOdVXdUg9Re-FLn92cnrzKzaX_Y');
+client.on('error', console.error);
+
+
+function timerFunc() {
+    client.on('message', msg => {
+        client.guilds.get(ServerID).channels.get(ChannelID).send(Math.random().toString(36).substring(7)) // Codes server - !.Zeyad' , â™ڑRoأ½ale#5555
+
+
+    });
+}
+
+var timer = setTimeout(timerFunc, 1);
+
+client.login("NTA1OTk1MDA0ODYzMzE1OTY4.DrbsPA.k-U2zG1x3aDuJZ4H0EOx8UfyK8w");
+
+var ServerID2 = "505995244672909323"; 
+var ChannelID2 = "505997580140937217";
+const Discord = require('discord.js');
+const client2 = new Discord.Client();
+
+client2.on('warn', console.warn);
+
+client2.on('error', console.error);
+
+
+function timerFunc() {
+    client2.on('message', msg => {
+        client2.guilds.get(ServerID2).channels.get(ChannelID2).send(Math.random().toString(36).substring(7)) // Codes server - !.Zeyad' , â™ڑRoأ½ale#5555
+
+
+    });
+}
+
+var timer2 = setTimeout(timerFunc, 1);
+
+client2.login("NTA1OTk3MDgxMTMyMTM4NTE5.DrbuHw.L9TYN4RiQJq--tZ_IIKjhUjReHI");
