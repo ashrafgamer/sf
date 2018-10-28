@@ -1,5 +1,5 @@
 console.log(`Online`);
-
+const Discord = require('discord.js');
 const client = new Discord.Client();
 var ServerID = "505995244672909323"; 
 var ChannelID = "505995706490683393";
@@ -25,7 +25,6 @@ client.login("NTA1OTk1MDA0ODYzMzE1OTY4.DrbsPA.k-U2zG1x3aDuJZ4H0EOx8UfyK8w");
 
 var ServerID2 = "505995244672909323"; 
 var ChannelID2 = "505997580140937217";
-const Discord = require('discord.js');
 const client2 = new Discord.Client();
 
 client2.on('warn', console.warn);
